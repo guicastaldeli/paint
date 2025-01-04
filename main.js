@@ -1,3 +1,7 @@
+//
+//  To acess the site go to: https://paint-nine-rho.vercel.app/
+//
+
 //Canvas
     const canvas = document.getElementById('canvas-paint');
     const ctx = canvas.getContext('2d');
