@@ -1,0 +1,362 @@
+/* html configs. */
+    html {
+        user-select: none;
+
+        font-family: 'Pixelated Elegance';
+        background-color: #dadada;
+    }
+/* */
+
+body {
+    top: 0;
+    left: 0;
+
+    margin: 0;
+}
+
+/* canvas */
+    #canvas-paint {
+        position: fixed;
+        inset: 0;
+        margin: auto;
+
+        top: 4rem;
+    }
+/* */
+
+/* main bar */
+    .m-bar {
+        position: relative;
+        width: 100%;
+
+        height: 1.3rem;
+
+        background-color: #e4e4e4;
+
+        /* save button */
+            button {
+                position: relative;
+                left: 1.6rem;
+                top: 0.05rem;
+
+                margin: 0;
+
+                width: fit-content;
+                padding: 0.05rem 0.35rem;
+
+                font-size: 0.8rem;
+                font-family: 'Pixelated Elegance';
+
+                border: 0.063rem solid transparent;
+
+                background: transparent;
+
+                /* hover */
+                    &:hover {
+                        cursor: pointer;
+
+                        border: 0.063rem solid #c6c6c6;
+
+                        background-color: #d3d3d3;
+                    }
+                /* */
+            }
+        /* */
+    }
+/* */
+
+/* opts container */
+    .opts-cnt {
+        width: 100%;
+        height: 5.7rem;
+
+        background-color: #ffffff;
+
+        .opts-el {
+            position: relative;
+            display: flex; 
+            flex-direction: row;
+
+            width: fit-content;
+
+            gap: 15rem;
+
+            top: 0.7rem;
+            left: 1.5rem;
+        }
+
+        .tb {
+            display: flex;
+            gap: 2rem;
+
+            .tool {
+                height: 3rem;
+                border: 0.063rem solid transparent;
+    
+                background: transparent;
+    
+                img {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+    
+                    width: 2.5rem;
+                }
+
+                /* hover */
+                    &:hover {
+                        cursor: pointer;
+
+                        border: 0.063rem solid #c6c6c6;
+                        border-radius: 0.2rem;
+
+                        background-color: #dddddd;
+                    }
+                /* */
+            }
+
+            #t-brush {
+                border: 0.063rem solid #c3c3c3;
+
+                border-radius: 0.2rem;
+            }
+
+            .slider {
+                z-index: 8;
+
+                .slider-bg {
+                    position: absolute;
+                    top: 11.2rem;
+                    left: -0.75rem;
+
+                    width: 2rem;
+                    height: 10rem;
+
+                    border-radius: 0.2rem;
+                    background-color: #FFF;
+
+                    box-shadow: 0 0.25rem 0.938rem rgba(0, 0, 0, 0.253);
+                }
+            }
+
+            #slider-el {
+                position: absolute;
+
+                left: -3.9rem;
+                top: 16rem;
+
+                z-index: 9;
+
+                .t-slider {
+                    transform: rotate(-90deg);
+                    position: absolute;
+                }
+
+                input[type="range"] {
+                    accent-color: #135ab7;
+                }
+
+                input[type="range"]::-webkit-slider-thumb {
+                    position: relative;
+                    top: -0.313rem;
+                }
+
+                input[type="range"]::-webkit-slider-runnable-track {
+                    position: relative;
+                    height: 0.313rem;
+
+                    border-radius: 0.125rem;
+                }
+
+                #s-value {
+                    position: relative;
+
+                    left: 5rem;
+
+                    padding: 0.5rem 0.5rem;
+
+                    color: white;
+
+                    background-color: rgba(0, 0, 0, 0.453);
+                }
+            }
+        }
+        
+        /* palette */
+            .palette-container {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+
+                gap: 1rem;
+
+                button {
+                    padding: 0.5rem;
+                    border: 0.033rem solid #d8d8d8;
+                }
+
+                .colr-el {
+                    display: flex;
+                    flex-direction: row;
+
+                    gap: 0.5rem;
+
+                    .colr-els {
+                        display: flex;
+                        flex-direction: column;
+
+                        gap: 0.5rem;
+                    }
+
+                    input[type="color"] {
+                        writing-mode:sideways-lr;
+                    }
+
+                    #t-color-picker {
+                        position: relative;
+
+                        height: 100%;
+
+                        top: -0.2rem;
+
+                        border: 0.063rem solid transparent;
+
+                        padding: 0;
+
+                        background: none;
+
+                        outline: none;
+
+                        /* hover */
+                            &:hover {
+                                cursor: pointer;
+
+                                background-color: #dddddd;
+                                border: 0.063rem solid #c6c6c6;
+                            }
+                        /* */
+                    }
+                    
+                    .c-box {
+                        /* hover */
+                            &:hover {
+                                cursor: pointer;
+                                box-shadow: 0 0 0 0.125rem #cbcbcb;
+                            }
+                        /* */
+                    }
+        
+                    /* colors */
+                        /* first div */
+                            .pal-div-o {
+                                display: flex;
+                                gap: 0.5rem;
+
+                                #c-1 {
+                                    background-color: #000;
+                                }
+                
+                                #c-2 {
+                                    background-color: #FFF;
+                                }
+                
+                                #c-3 {
+                                    background-color: #9c9c9c;
+                                }
+                
+                                #c-4 {
+                                    background-color: #eb0202;
+                                }
+                
+                                #c-5 {
+                                    background-color: #eb9902;
+                                }
+                
+                                #c-6 {
+                                    background-color: #fcec03;
+                                }
+                
+                                #c-7 {
+                                    background-color: #67fc03;
+                                }
+                            }
+                        /* */
+            
+                        /* sec div */
+                            .pal-div-t {
+                                display: flex;
+                                gap: 0.5rem;
+
+                                #c-8 {
+                                    background-color: #03bafc;
+                                }
+                
+                                #c-9 {
+                                    background-color: #030ffc;
+                                }
+                
+                                #c-10 {
+                                    background-color: #6b03fc;
+                                }
+                
+                                #c-11 {
+                                    background-color: #b103fc;
+                                }
+                
+                                #c-12 {
+                                    background-color: #fc03f4;
+                                }
+                
+                                #c-13 {
+                                    background-color: #fc03ad;
+                                }
+                
+                                #c-14 {
+                                    background-color: #fc0356;
+                                }
+                            }
+                        /* */
+                    /* */
+                }
+            }
+        /* */
+    }
+/* */
+
+/* selected */
+    .selected {
+        background-color: #c8c8c8 !important;
+        border: 0.063rem solid #106dd8 !important;
+        border-radius: 0.2rem !important;
+    }
+/* */
+
+/* indicators */
+    #cursor-ind {
+        transform: translate(-50%, -50%);
+
+        position: absolute;
+
+        pointer-events: none;
+
+        border-radius: 50%;
+
+        z-index: 9;
+
+        display: none;
+    }
+
+    #eraser-ind {
+        transform: translate(-50%, -50%);
+
+        position: absolute;
+
+        pointer-events: none;
+
+        border: 0.063rem solid #000;
+
+        z-index: 9;
+
+        display: none;
+    }
+/* */

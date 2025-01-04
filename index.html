@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint</title>
+    <link rel="icon" href="./assets/ico/ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <div class="paint-container">
+        <div class="opts-cnt">
+            <div class="m-bar">
+                <div class="opts-b">
+                    <button id="sv-btn">Save</button>
+                </div>
+            </div>
+
+            <div class="opts-el">
+                <!-- Tools -->
+                    <div class="tb">
+                        <button id="t-brush" class="tool">
+                            <img src="./assets/img/brush-max.png" alt="brush" />
+                        </button>
+            
+                        <button id="t-pencil" class="tool">
+                            <img src="./assets/img/pencil-max.png" alt="pencil" />
+                        </button>
+            
+                        <button id="t-eraser" class="tool">
+                            <img src="./assets/img/eraser-max.png" alt="pencil" />
+                        </button>
+            
+                        <!-- Slider -->
+                        <div class="slider">
+                            <div class="slider-bg"></div>
+                        </div>
+                    </div>
+                <!---->
+            
+                <!-- Colors Palette -->
+                    <div class="palette-container">
+                        <div class="colr-el">
+                            <input type="color" id="t-color-picker" />
+
+                            <div class="colr-els">
+                                <div class="pal-div-o">
+                                    <button class="c-box" id="c-1" data-color="#000"></button>
+                                    <button class="c-box" id="c-2" data-color="#FFF"></button>
+                                    <button class="c-box" id="c-3" data-color="#9c9c9c"></button>
+                                    <button class="c-box" id="c-4" data-color="#eb0202"></button>
+                                    <button class="c-box" id="c-5" data-color="#eb9902"></button>
+                                    <button class="c-box" id="c-6" data-color="#fcec03"></button>
+                                    <button class="c-box" id="c-7" data-color="#67fc03"></button>
+                                </div>
+                
+                                <div class="pal-div-t">
+                                    <button class="c-box" id="c-8" data-color="#03bafc"></button>
+                                    <button class="c-box" id="c-9" data-color="#030ffc"></button>
+                                    <button class="c-box" id="c-10" data-color="#6b03fc"></button>
+                                    <button class="c-box" id="c-11" data-color="#b103fc"></button>
+                                    <button class="c-box" id="c-12" data-color="#fc03f4"></button>
+                                    <button class="c-box" id="c-13" data-color="#fc03ad"></button>
+                                    <button class="c-box" id="c-14" data-color="#fc0356"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!---->
+            </div>
+        </div>
+
+        <!-- Cursor Indicator -->
+        <div id="cursor-ind"></div>
+        <div id="eraser-ind"></div>
+
+        <!-- Canvas -->
+       <canvas id="canvas-paint"></canvas>
+    </div>
+
+    <!---- Script ---->
+    <script src="./main.js" defer></script>
+</body>
+</html>
